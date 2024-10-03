@@ -108,7 +108,7 @@ weather_df = replace_year_values(create_byweather_df(main_df))
 #Membuka trend waktu penyewaan sepeda dari perbandingan Jam, Hari dan Tahun?
 
 # pola yang terjadi pada jumlah total Bike Sharing 
-st.subheader("Trend Pola Total Penyewaan Sepeda Setiap Tahun :point_down:")
+st.subheader("Tren Penyewaan Sepeda Tiap Tahun")
 fig, ax = plt.subplots()
 sns.lineplot(data=monthly_df, x="mnth", y="cnt", hue="yr", palette="bright", marker="o")
 plt.xlabel("Urutan Bulan")
@@ -128,7 +128,7 @@ with st.expander('**Bagaimana Kesimpulannya?**'):
 )
 
 # pola yang terjadi pada jumlah total penyewaan sepeda berdasarkan Jam
-st.subheader("Trend Penyewaan Sepeda Berdasarkan Jam :point_down:")
+st.subheader("Tren Penyewaan Sepeda Tiap Jam")
 fig, ax = plt.subplots()
 sns.lineplot(data=hourly_df, x="hr", y="cnt", hue="yr", palette="bright", marker="o")
 plt.xlabel("Urutan Jam")
@@ -149,7 +149,8 @@ Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meni
     """
 )
 
-   
+
+st.subheader("Tren Penyewaan Sepeda Tiap Hari (Weekdays & Weekends")
 # Assuming `day` DataFrame is already defined in your Streamlit app
 # Grouping the data
 jumlah_per_hari_kerja = day_clean_df.groupby(by=["workingday", "yr"]).agg({
