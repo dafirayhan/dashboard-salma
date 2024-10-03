@@ -152,31 +152,7 @@ with st.expander('**Bagaimana Kesimpulannya?**'):
 Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meningkat secara signifikan dibandingkan tahun sebelumnya. Ini mungkin menunjukkan adanya peningkatan minat terhadap transportasi yang lebih ramah lingkungan atau bisa juga menjadi refleksi dari perubahan gaya hidup masyarakat. Di sisi lain, penyewaan sepeda paling sepi terjadi pada malam hingga dini hari (sekitar pukul 2-5 pagi), yang wajar karena kebanyakan orang sedang beristirahat.
     """
 )
-#pola terjadi pada trend penyewaan sepeda terhadap perbedaan musim
-season_mapping = {1: 'Musim Dingin', 2: 'Musim Semi', 3: 'Musim Panas', 4: 'Musim Gugur'}
-season_df['season'] = season_df['season'].map(season_mapping)
-st.subheader("Trend penyewaan sepeda berdasarkan Musim :point_down:")
-fig, ax = plt.subplots()
-sns.barplot(data=season_df, x="season", y="cnt", hue="yr", palette="bright")
-plt.ylabel("Jumlah")
-plt.title("Jumlah total sepeda yang disewakan berdasarkan Musim")
-plt.legend(title="Tahun", loc="upper right")  
-for container in ax.containers:
-    ax.bar_label(container, fontsize=8, color='white', weight='bold', label_type='edge')
-plt.tight_layout()
-st.pyplot(fig)
 
-#Menambahkan keterangan
-with st.expander('**Bagaimana Kesimpulannya?**'):
-   st.markdown(
-    """
-    Grafik ketiga menunjukkan tren penyewaan sepeda setiap bulan selama setahun dan mengungkapkan bahwa 
-    penyewaan sepeda meningkat secara signifikan selama bulan-bulan hangat, mencapai puncaknya di bulan 
-    Juni dan Juli, dan menurun menuju bulan-bulan yang lebih dingin. Juga, terdapat peningkatan jumlah 
-    penyewaan sepeda secara keseluruhan dari tahun 2010 ke 2011, yang menunjukkan pertumbuhan popularitas 
-    layanan bike sharing dari tahun ke tahun
-    """
-   )
    
 #Pola Trend Penyewa sepeda saat Hari Kerja dan Libur Kerja
 st.subheader("Trend penyewaan sepeda Berdasarkan Hari Libur dan Hari Kerja :point_down:")
