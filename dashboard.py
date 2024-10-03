@@ -154,6 +154,7 @@ Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meni
 )
 
    
+# Assuming `day` DataFrame is already defined in your Streamlit app
 # Grouping the data
 jumlah_per_hari_kerja = day.groupby(by=["workingday", "yr"]).agg({
     "cnt": "sum"
@@ -162,7 +163,7 @@ jumlah_per_hari_kerja = day.groupby(by=["workingday", "yr"]).agg({
 # Convert workingday from binary to categorical for better labels
 jumlah_per_hari_kerja['workingday'] = jumlah_per_hari_kerja['workingday'].replace({0: "Weekends", 1: "Weekdays"})
 
-# Create the figure and axis
+# Create a figure for the bar plot
 fig, ax = plt.subplots()
 
 # Create the bar plot with seaborn
@@ -171,7 +172,7 @@ sns.barplot(data=jumlah_per_hari_kerja, x="workingday", y="cnt", hue="yr", palet
 # Setting labels and title
 plt.xlabel("Hari")
 plt.ylabel("Jumlah Penyewaan Sepeda")
-plt.title("Total Penyewaan Sepeda Berdasarkan Weekdays/Weekends")
+plt.title("Total Penyewaan Sepeda Berdasarkan Hari Kerja dan Hari Libur")
 plt.legend(title="Tahun", loc="upper right")
 
 # Adding bar labels for better readability
