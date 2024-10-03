@@ -110,7 +110,7 @@ weather_df = replace_year_values(create_byweather_df(main_df))
 # pola yang terjadi pada jumlah total Bike Sharing 
 st.subheader("Tren Penyewaan Sepeda Tiap Tahun")
 fig, ax = plt.subplots()
-sns.lineplot(data=monthly_df, x="mnth", y="cnt", hue="yr", palette="bright", marker="o")
+sns.lineplot(data=monthly_df, x="mnth", y="cnt", hue="yr", palette=["#FF6347", "#4682B4"], marker="o")
 plt.xlabel("Urutan Bulan")
 plt.ylabel("Jumlah")
 plt.title("Jumlah total sepeda yang disewakan")
@@ -130,7 +130,7 @@ with st.expander('**Bagaimana Kesimpulannya?**'):
 # pola yang terjadi pada jumlah total penyewaan sepeda berdasarkan Jam
 st.subheader("Tren Penyewaan Sepeda Tiap Jam")
 fig, ax = plt.subplots()
-sns.lineplot(data=hourly_df, x="hr", y="cnt", hue="yr", palette="bright", marker="o")
+sns.lineplot(data=hourly_df, x="hr", y="cnt", hue="yr", palette=["#FF6347", "#4682B4"], marker="o")
 plt.xlabel("Urutan Jam")
 plt.ylabel("Jumlah")
 plt.title("Jumlah total sepeda yang disewakan berdasarkan Jam dan tahun")
@@ -164,7 +164,7 @@ jumlah_per_hari_kerja['workingday'] = jumlah_per_hari_kerja['workingday'].replac
 fig, ax = plt.subplots()
 
 # Create the bar plot with seaborn
-sns.barplot(data=jumlah_per_hari_kerja, x="workingday", y="cnt", hue="yr", palette="bright", ax=ax)
+sns.barplot(data=jumlah_per_hari_kerja, x="workingday", y="cnt", hue="yr", palette=["#FF6347", "#4682B4"], ax=ax)
 
 # Setting labels and title
 plt.xlabel("Hari")
