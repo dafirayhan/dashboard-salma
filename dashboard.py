@@ -150,7 +150,7 @@ Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meni
 )
 
 
-st.subheader("Tren Penyewaan Sepeda Tiap Hari (Weekdays & Weekends")
+st.subheader("Tren Penyewaan Sepeda Tiap Hari (Weekdays & Weekends)")
 # Assuming `day` DataFrame is already defined in your Streamlit app
 # Grouping the data
 jumlah_per_hari_kerja = day_clean_df.groupby(by=["workingday", "yr"]).agg({
