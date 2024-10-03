@@ -154,29 +154,35 @@ Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meni
 )
 
    
-#Pola Trend Penyewa sepeda saat Hari Kerja dan Libur Kerja
-st.subheader("Trend penyewaan sepeda Berdasarkan Hari Libur dan Hari Kerja :point_down:")
-col_holiday, col_workingday = st.columns([1, 1])
-with col_holiday:
-    fig, ax = plt.subplots()
-    sns.barplot(data=holiday_df, x="holiday", y="cnt", hue="yr", palette="bright")
-    plt.ylabel("Jumlah")
-    plt.title("Jumlah total sepeda yang disewakan berdasarkan hari Libur")
-    plt.legend(title="Tahun", loc="upper right")  
-    for container in ax.containers:
-        ax.bar_label(container, fontsize=8, color='white', weight='bold', label_type='edge')
-    plt.tight_layout()
-    st.pyplot(fig)
-with col_workingday:
-    fig, ax = plt.subplots()
-    sns.barplot(data=workingday_df, x="workingday", y="cnt", hue="yr", palette="bright")
-    plt.ylabel("Jumlah")
-    plt.title("Jumlah total sepeda yang disewakan berdasarkan hari Kerja")
-    plt.legend(title="Tahun", loc="upper right")  
-    for container in ax.containers:
-        ax.bar_label(container, fontsize=8, color='white', weight='bold', label_type='edge')
-    plt.tight_layout()
-    st.pyplot(fig)
+# Grouping the data
+jumlah_per_hari_kerja = day.groupby(by=["workingday", "yr"]).agg({
+    "cnt": "sum"
+}).reset_index()
+
+# Convert workingday from binary to categorical for better labels
+jumlah_per_hari_kerja['workingday'] = jumlah_per_hari_kerja['workingday'].replace({0: "Weekends", 1: "Weekdays"})
+
+# Create the figure and axis
+fig, ax = plt.subplots()
+
+# Create the bar plot with seaborn
+sns.barplot(data=jumlah_per_hari_kerja, x="workingday", y="cnt", hue="yr", palette="bright", ax=ax)
+
+# Setting labels and title
+plt.xlabel("Hari")
+plt.ylabel("Jumlah Penyewaan Sepeda")
+plt.title("Total Penyewaan Sepeda Berdasarkan Weekdays/Weekends")
+plt.legend(title="Tahun", loc="upper right")
+
+# Adding bar labels for better readability
+for container in ax.containers:
+    ax.bar_label(container, fontsize=8, color='white', weight='bold', label_type='edge')
+
+# Adjust layout for better spacing
+plt.tight_layout()
+
+# Display the plot in Streamlit
+st.pyplot(fig)
 
 #Menambahkan keterangan
 with st.expander('**Bagaimana Kesimpulannya?**'):
