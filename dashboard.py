@@ -68,8 +68,8 @@ def create_byweather_df(df):
 
 # Membuat Load Cleaned Data
 
-day_clean_df = pd.read_csv(r"pd.read_csv("main_data.csv")")
-hour_df = pd.read_csv(r"C:\Users\LENOVO\Downloads\Bike-sharing-dataset\hour.csv")
+day_clean_df = pd.read_csv("main_data.csv")
+hour_df = pd.read_csv("hour.csv")
 
 # Membuat Load Filter Data
 
