@@ -5,6 +5,7 @@ import streamlit as st
 import datetime
 
 
+
 # Set the background to a light gray color
 plt.rcParams['figure.facecolor'] = 'lightgray'
 plt.rcParams['axes.facecolor'] = 'lightgray'
@@ -15,7 +16,7 @@ plt.rcParams['axes.labelcolor'] = 'black'
 plt.rcParams['xtick.color'] = 'black'
 plt.rcParams['ytick.color'] = 'black'
 
-st.header('Dashboard Study Case Bike Sharing :man-biking:')
+st.header('Dashboard Analisis Bike Sharing Project')
 
 # Untuk mempermudah maka menyiapkan Halper Function
 
