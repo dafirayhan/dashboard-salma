@@ -76,9 +76,6 @@ min_date = day_clean_df["dteday"].min()
 max_date = day_clean_df["dteday"].max()
 
 with st.sidebar:
-    # Membuat Logo pada Dashboard
-    st.image("sepeda_foto.png")
-
     # Opsi untuk mengganti rentang waktu
     start_date, end_date = st.date_input(
         label='Analysis Time:',
