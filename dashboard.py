@@ -182,7 +182,6 @@ with col_workingday:
 with st.expander('**Bagaimana Kesimpulannya?**'):
    st.markdown(
     """
-   Pada grafik ini menunjukkan bahwa jumlah total penyewaan sepeda lebih tinggi pada hari kerja dibandingkan dengan hari libur, 
-   menunjukkan bahwa sepeda banyak digunakan untuk keperluan komuter sehari-hari seperti pergi ke tempat kerja atau sekolah.
+   Grafik ini menunjukkan bahwa jumlah penyewaan sepeda lebih tinggi selama hari kerja (weekdays) dibandingkan dengan akhir pekan (weekends) pada kedua tahun yang dianalisis. Hal ini mengindikasikan bahwa sepeda lebih sering digunakan sebagai sarana transportasi harian, seperti untuk keperluan komuter atau sekolah selama hari kerja. Selain itu, terdapat peningkatan jumlah penyewaan sepeda dari tahun pertama ke tahun kedua, baik pada weekdays maupun weekends. Peningkatan ini lebih signifikan pada hari kerja, yang mungkin mencerminkan perubahan gaya hidup atau kebijakan yang mendorong penggunaan sepeda, seperti kesadaran terhadap kesehatan atau dukungan kebijakan transportasi. Meskipun terjadi peningkatan aktivitas penyewaan pada akhir pekan di tahun kedua, jumlahnya tetap lebih rendah dibandingkan hari kerja, menunjukkan bahwa sepeda lebih sering digunakan dalam rutinitas sehari-hari. Puncak jumlah penyewaan tertinggi terjadi pada hari kerja di tahun kedua, dengan lebih dari 1,4 juta penyewaan, memperkuat tren positif dalam penggunaan sepeda sebagai moda transportasi sehari-hari.
     """
 )
