@@ -156,7 +156,7 @@ Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meni
    
 # Assuming `day` DataFrame is already defined in your Streamlit app
 # Grouping the data
-jumlah_per_hari_kerja = day.groupby(by=["workingday", "yr"]).agg({
+jumlah_per_hari_kerja = day_clean_df.groupby(by=["workingday", "yr"]).agg({
     "cnt": "sum"
 }).reset_index()
 
