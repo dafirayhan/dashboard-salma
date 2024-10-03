@@ -127,12 +127,7 @@ st.pyplot(fig)
 with st.expander('**Bagaimana Kesimpulannya?**'):
    st.markdown(
     """
-    Berdasarkan grafik tren pola total penyewaan sepeda setiap tahun, terlihat bahwa puncak penyewaan sepeda terjadi pada bulan 6 dan 7, 
-    yang kemungkinan besar mencerminkan bulan-bulan musim panas dengan kondisi cuaca yang ideal untuk bersepeda. Setelah mencapai puncaknya, 
-    grafik menunjukkan penurunan signifikan dalam jumlah penyewaan sepeda, dimulai setelah bulan 7, yang dapat diinterpretasikan sebagai transisi dari musim panas 
-    ke musim gugur dan kemudian musim dingin, di mana cuaca kurang mendukung untuk kegiatan bersepeda. Selain itu, ketika membandingkan data antara tahun 2010 dan 2011, 
-    terdapat peningkatan jumlah penyewaan sepeda di setiap bulan pada tahun 2011, menandakan bahwa layanan bike sharing semakin populer dan mengalami 
-    pertumbuhan dari tahun ke tahun.
+    
     """
 )
 
@@ -152,12 +147,9 @@ st.pyplot(fig)
 with st.expander('**Bagaimana Kesimpulannya?**'):
    st.markdown(
     """
-    Berdasarkan grafik pertama yang menunjukkan tren penyewaan sepeda berdasarkan jam, 
-    kita dapat menyimpulkan bahwa terdapat dua puncak utama penyewaan sepeda setiap hari, 
-    yang terjadi sekitar jam 8 pagi dan jam 5 sore. Ini mungkin menunjukkan pola perjalanan 
-    penduduk setempat yang menggunakan sepeda untuk berangkat dan pulang dari tempat kerja atau sekolah. 
-    Selain itu, terlihat bahwa pada tahun 2011, jumlah penyewaan sepeda secara keseluruhan lebih tinggi dibandingkan 
-    dengan tahun 2010 pada hampir setiap jam, menunjukkan peningkatan popularitas layanan bike sharing dari tahun ke tahun.
+    Grafik ini menggambarkan pola penyewaan sepeda dalam dua tahun yang berbeda, menunjukkan bagaimana aktivitas bersepeda memiliki ritme tertentu sepanjang hari. Terlihat jelas bahwa puncak penyewaan terjadi di pagi hari sekitar pukul 7-8 dan kembali meningkat di sore hari sekitar pukul 17. Hal ini seolah menggambarkan rutinitas harian masyarakat yang mungkin menggunakan sepeda sebagai sarana transportasi saat berangkat dan pulang kerja atau sekolah.
+
+Menariknya, di tahun kedua (tahun '1' pada grafik), jumlah penyewaan sepeda meningkat secara signifikan dibandingkan tahun sebelumnya. Ini mungkin menunjukkan adanya peningkatan minat terhadap transportasi yang lebih ramah lingkungan atau bisa juga menjadi refleksi dari perubahan gaya hidup masyarakat. Di sisi lain, penyewaan sepeda paling sepi terjadi pada malam hingga dini hari (sekitar pukul 2-5 pagi), yang wajar karena kebanyakan orang sedang beristirahat.
     """
 )
 #pola terjadi pada trend penyewaan sepeda terhadap perbedaan musim
