@@ -4,9 +4,6 @@ import seaborn as sns
 import streamlit as st
 import datetime
 
-with st.sidebar:
-    st.subheader('Hi! Selamat Datang di Proyek Analisa Bike Sharing :superhero:')
-
 
 # Set the background to a light gray color
 plt.rcParams['figure.facecolor'] = 'lightgray'
